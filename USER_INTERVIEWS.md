@@ -1,17 +1,17 @@
 # User Interviews
 
-## Interview 1 – May 6, 2025
+## Interview 1 – May 6, 2026
 **Name:** Vaibhavi Shah
 **Role:** Freelance Content Writer since January
 **Company Stage:** Individual, without a team
 **Length of Interview:** ~16 minutes
 
 ### Tools They Currently Use
-- ChatGPT Plus (costing $20/month)
+- ChatGPT Plus (costing ₹1999/month)
 - Occasionally uses Claude free tier
 
 ### Important Quotes
-- "I'm spending ₹1600/month on ChatGPT Plus but half 
+- "I'm spending ₹1999/month on ChatGPT Plus but half 
   the time the free version will do for what I need"
 - "I was totally unaware of Claude's free tier being 
   much more suitable for writing tasks"
