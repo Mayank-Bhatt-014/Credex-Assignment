@@ -34,7 +34,7 @@ to ChatGPT Plus and rarely utilizes GPT-4o/image
 generation tools, then it’s immediately flagged.
 
 
-## Interview 2 — May 7, 2025
+## Interview 2 — May 7, 2026
 **Name:** Aakash T. (anonymized)
 **Role:** Legal Professional / Law Firm Worker
 **Company Stage:** Professional services firm
@@ -86,7 +86,7 @@ genuinely serve the same purpose.
 
 ---
 
-## Interview 3 — May 7, 2025
+## Interview 3 — May 7, 2026
 **Name:** Purnima B. (anonymized)
 **Role:** Professional (company-paid subscription)
 **Company Stage:** Mid-size company, team usage
