@@ -63,3 +63,25 @@ MongoDB. Set up audit save route, lead capture route,
 and Anthropic API summary route. Deploy backend on 
 Render and frontend on Vercel.
 
+## Day 3 — 2026-05-08
+
+**Hours worked:** 3
+
+**What I did:** Built the entire Express backend.
+Created MongoDB schemas for Audit and Lead models.
+Built all routes: POST /api/audit, GET /api/audit/:id,
+POST /api/leads. Built anthropicService with Gemini/
+fallback summary, emailService with Resend, and 
+rate limiter middleware. Connected MongoDB Atlas.
+Server running on port 5000.
+
+**Blockers / what I'm stuck on:** Frontend showing 
+"cannot get" — likely because the audit result is 
+not being saved to backend yet, frontend still 
+reading from localStorage only. Will fix tomorrow
+by connecting frontend API calls to backend.
+
+**Plan for tomorrow:** Connect frontend to backend —
+save audit on form submit, fetch summary from 
+backend, fix lead capture modal API call, deploy 
+both frontend on Vercel and backend on Render.
