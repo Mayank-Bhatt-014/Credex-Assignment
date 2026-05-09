@@ -88,7 +88,7 @@ both frontend on Vercel and backend on Render.
 
 ## Day 4 — 2026-05-09
 
-**Hours worked:** 7
+**Hours worked:** 4
 
 **What I did:** Connected frontend to backend 
 completely. Fixed hydration error in 
