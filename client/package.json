@@ -13,25 +13,11 @@
     "next": "16.2.4",
     "react": "19.2.4",
     "react-bootstrap": "^2.10.10",
-    "react-dom": "19.2.4",
-    "test": "jest"
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.5",
-    "@tailwindcss/postcss": "^4",
-    "@testing-library/react": "^16.3.2",
-    "babel-jest": "^30.3.0",
     "eslint": "^9",
-    "eslint-config-next": "16.2.4",
-    "jest": "^30.3.0",
-    "tailwindcss": "^4"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
+    "eslint-config-next": "16.2.4"
   },
   "type": "module"
 }
