@@ -85,3 +85,45 @@ by connecting frontend API calls to backend.
 save audit on form submit, fetch summary from 
 backend, fix lead capture modal API call, deploy 
 both frontend on Vercel and backend on Render.
+
+## Day 4 — 2026-05-09
+
+**Hours worked:** 7
+
+**What I did:** Connected frontend to backend 
+completely. Fixed hydration error in 
+useFormPersistence by loading localStorage only 
+inside useEffect. Fixed Next.js 15 params.await 
+issue in audit results page. Created 
+client/.env.local with NEXT_PUBLIC_API_URL. 
+Updated SpendForm to save audit to backend, 
+AuditResults to fetch summary from backend, 
+LeadCaptureModal to post leads to backend.
+Replaced Anthropic API with Gemini API and 
+renamed anthropicService to geminiService.
+Removed Tailwind config files and globals.css 
+Tailwind imports that were breaking Vercel build.
+Fixed package.json by removing invalid test 
+dependency. Deployed backend on Render and 
+frontend on Vercel. Tested full end to end flow 
+on live URL — audit runs, results show, leads 
+save to MongoDB, emails arriving in Gmail via 
+Resend.
+
+**What I learned:** Vercel requires env variables 
+to be set in dashboard and redeployed to take 
+effect. Next.js create-next-app adds Tailwind 
+config files even when you don't select Tailwind 
+— these cause build errors if Tailwind packages 
+are removed.
+
+**Blockers / what I'm stuck on:** Vercel env 
+variable took multiple attempts to get working. 
+Tailwind config files left over from project 
+setup caused unexpected build failures.
+
+**Plan for tomorrow:** Write all required markdown 
+files — README, ARCHITECTURE, PRICING_DATA, 
+PROMPTS, TESTS, GTM, ECONOMICS, LANDING_COPY, 
+METRICS, REFLECTION. Run Lighthouse audit on 
+live URL. Final commit and submit Google Form.
