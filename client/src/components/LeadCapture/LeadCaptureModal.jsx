@@ -44,12 +44,12 @@ export default function LeadCaptureModal({ show, onHide, auditId }) {
     setIsSubmitting(true);
     setError("");
 
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
     try {
-      const response = await fetch("/api/leads", {
+      const response = await fetch(`${API_URL}/api/leads`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: formData.email,
           companyName: formData.companyName,
@@ -59,7 +59,7 @@ export default function LeadCaptureModal({ show, onHide, auditId }) {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to submit lead");
+        throw new Error("Failed to submit");
       }
 
       handleHide();

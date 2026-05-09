@@ -11,37 +11,36 @@ const DEFAULT_FORM_DATA = {
   tools: DEFAULT_TOOLS,
 };
 
-function getInitialFormData() {
-  if (typeof window === "undefined") {
-    return DEFAULT_FORM_DATA;
-  }
-
-  try {
-    const savedFormData = window.localStorage.getItem(STORAGE_KEY);
-
-    if (!savedFormData) {
-      return DEFAULT_FORM_DATA;
-    }
-
-    return {
-      ...DEFAULT_FORM_DATA,
-      ...JSON.parse(savedFormData),
-    };
-  } catch {
-    return DEFAULT_FORM_DATA;
-  }
-}
-
 export default function useFormPersistence() {
-  const [formData, setFormData] = useState(getInitialFormData);
+  const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      try {
+        const saved = window.localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          setFormData({ ...DEFAULT_FORM_DATA, ...JSON.parse(saved) });
+        }
+      } catch {
+        // ignore
+      }
+      setIsLoaded(true);
+    }, 0);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isLoaded) return;
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
     } catch {
-      // localStorage can fail in private browsing or restricted environments.
+      // ignore
     }
-  }, [formData]);
+  }, [formData, isLoaded]);
 
   return [formData, setFormData];
 }

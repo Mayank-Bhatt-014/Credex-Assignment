@@ -61,7 +61,8 @@ export default function AuditResults() {
       setIsSummaryLoading(true);
 
       try {
-        const response = await fetch(`/api/summary?auditId=${encodeURIComponent(auditId)}`);
+        const API_URL = process.env.NEXT_PUBLIC_API_URL;
+        const response = await fetch(`${API_URL}/api/audit/${encodeURIComponent(auditId)}`);
 
         if (!response.ok) {
           throw new Error("Summary request failed");

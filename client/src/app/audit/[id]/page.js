@@ -2,13 +2,15 @@ import { Container } from "react-bootstrap";
 import AuditResults from "../../../components/AuditResults/AuditResults.jsx";
 
 export async function generateMetadata({ params }) {
+  const { id } = await params;
+
   return {
     title: "My AI Spend Audit - Credex",
     description: "See where I could save on AI tools",
     openGraph: {
       title: "I audited my AI tool spend with Credex",
       description: "Find out if you're overpaying for AI tools",
-      url: `https://yourcredexapp.vercel.app/audit/${params.id}`,
+      url: `https://yourcredexapp.vercel.app/audit/${id}`,
     },
     twitter: {
       card: "summary",

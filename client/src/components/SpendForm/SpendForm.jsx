@@ -38,14 +38,30 @@ export default function SpendForm() {
     }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
     const auditResult = runAudit(formData);
     const auditId = createAuditId();
 
     window.localStorage.setItem(AUDIT_RESULT_KEY, JSON.stringify(auditResult));
     window.localStorage.setItem(AUDIT_ID_KEY, auditId);
+
+    try {
+      const response = await fetch(`${API_URL}/api/audit`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ auditId, formData, auditResult }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to save audit to backend");
+      }
+    } catch (error) {
+      console.error("Failed to save audit to backend:", error);
+    }
+
     router.push(`/audit/${auditId}`);
   }
 
