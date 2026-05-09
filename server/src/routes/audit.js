@@ -1,7 +1,7 @@
 import express from "express";
 import Audit from "../models/Audit.js";
 import { auditLimiter } from "../middleware/rateLimiter.js";
-import { generateSummary } from "../services/anthropicService.js";
+import { generateSummary } from "../services/geminiService.js";
 
 const router = express.Router();
 
