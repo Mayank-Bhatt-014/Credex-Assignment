@@ -14,7 +14,7 @@ export default function ToolRow({ tool, onChange, pricingData }) {
   }
 
   return (
-    <Row className="align-items-center g-3 py-3 border-bottom">
+    <Row className="align-items-center g-3 py-2 border-bottom">
       <Col xs={12} md={1}>
         <Form.Check
           type="checkbox"
