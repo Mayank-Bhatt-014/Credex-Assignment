@@ -1,3 +1,9 @@
+# Development Log
+
+**Project Assigned:** Evening of 2026-05-06  
+**Submission Deadline:** 2026-05-13  
+
+
 ## Day 1 — 2026-05-06
 
 **Hours worked:** 2
@@ -130,7 +136,7 @@ live URL. Final commit and submit Google Form.
 
 ## Day 5 — 2026-05-10
 
-**Hours worked:** 6
+**Hours worked:** 3
 
 **What I did:** Fixed CI workflow by setting up 
 tests folder with proper package.json and 
@@ -162,3 +168,15 @@ tomorrow after taking screenshots of live app.
 screenshots, write REFLECTION.md with honest 
 answers to all 5 questions, final commit, 
 submit Google Form.
+
+## Day 6 — 2026-05-11
+
+**Hours worked:** 2
+
+**What I did:** Wrote REFLECTION.md with detailed and honest answers about the development process, technical challenges, AI usage, and self-evaluation. Documented the Jest ES Module debugging issue, frontend-backend integration challenges in Next.js, deployment learnings, and decisions around postponing JWT authentication due to time constraints. Also reflected on problem-solving, discipline, code quality, and entrepreneurial thinking during the build process.
+
+**What I learned:** Writing reflections properly helps in understanding not just what was built, but also why certain technical and product decisions were made. I also realized how important debugging skills and clear thinking are during backend integration and debugging.
+
+**Blockers / what I'm stuck on:** README.md is still pending because of college workload and time constraints. Need to organize screenshots and finalize project documentation later.
+
+**Plan for tomorrow:** Complete the README.md with proper project overview, setup instructions, screenshots, and technical details. Review all files and prepare the final submission.
